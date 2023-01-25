@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "puppeteer": "^19.6.0"
+  },
+  "name": "puppeteer-automation",
+  "description": "Trying out puppeteer for web testing and automation.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/earthquakesan/puppeteer-automation.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/earthquakesan/puppeteer-automation/issues"
+  },
+  "homepage": "https://github.com/earthquakesan/puppeteer-automation#readme"
+}
