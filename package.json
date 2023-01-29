@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "puppeteer": "^19.6.0"
+    "puppeteer": "~18.1.0"
   },
   "name": "puppeteer-automation",
   "description": "Trying out puppeteer for web testing and automation.",
