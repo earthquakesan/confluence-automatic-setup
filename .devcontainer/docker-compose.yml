@@ -46,6 +46,30 @@ services:
     env_file:
       - postgres.env
 
+  # Scrapes docker containers (reads docker endpoint)
+  newrelic:
+    image: newrelic/infrastructure:latest
+    restart: unless-stopped
+    privileged: true
+    pid: "host"
+    cap_add:
+      - SYS_PTRACE
+    env_file:
+      - newrelic.env
+    volumes:
+      - /:/host:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  # Scrapes confluence prometheus endpoint
+  prometheus-nri:
+    image: newrelic/nri-prometheus:1.5
+    restart: unless-stopped
+    network_mode: service:confluence
+    env_file:
+      - newrelic.env
+    volumes:
+      - ./config.yaml:/config.yaml
+
 volumes:
   confluence-data:
   postgres-data:
