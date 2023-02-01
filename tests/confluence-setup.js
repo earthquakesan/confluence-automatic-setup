@@ -2,7 +2,7 @@
 
 const puppeteer = require('puppeteer');
 
-const confluenceBase = "http://confluence:8090/";
+const confluenceBase = "http://localhost:8090/";
 const licenseString = `AAABkg0ODAoPeNp1kUFv4jAQhe/+FZH20h5SOUmBBslSWyd0CQnZYmC1Ehc3GsAiMdR2oPTXr0mKa
 Cv1lryx3pv3zS9WSyfh0vFDB/f6HdzHdw5lU8fHfoA2cJyD0mIridfFuIfvgsBDdCsNL8yYV0CAK
 7N+rfkGNJf3q4qL8qbYVqjYyuWNfST2QIyqAf2pVbHmGiJugJzMXey5AUapKEBqiN92Qh0/DU/zc
@@ -15,7 +15,7 @@ P8BalnOJTAsAhQ10TYlHJaDIF3hGMWwR6Y20+UcsgIUfm+/tQZqaY78phdqZ5qzkKTZrk0=X02jf`;
 // database is running inside the same network space as the app container
 // i.e. localhost will work for connecting between the docker-compose services
 const database = {
-  "hostname": "localhost",
+  "hostname": "postgres",
   "port": "5432",
   "name": "confluence",
   "username": "confluence",
