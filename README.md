@@ -12,3 +12,7 @@ node tests/confluence-setup.js
 ```
 
 This will do the initial setup of a confluence instance.
+
+# TODOs
+
+* Setup in k3s cluster (i.e. light weight k8s)
